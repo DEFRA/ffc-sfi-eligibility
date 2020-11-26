@@ -1,0 +1,5 @@
+resources:
+  queues:
+    - name: updateEligibility
+  topics:
+    - name: eligibilityChanged

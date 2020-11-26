@@ -1,6 +1,6 @@
 {
   "name": "ffc-sfi-eligibility",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Backend microservice for validating eligibility an SFI agreement",
   "homepage": "https://github.com/DEFRA/ffc-sfi-eligibility",
   "main": "app/index.js",
@@ -10,12 +10,13 @@
   },
   "author": "Defra",
   "contributors": [
-    "Steve Hunt <steven.hunt@defra.gov.uk>",
-    "Paul Andrews <paul.andrews@defra.gov.uk>"
+    "Paul Andrews <paul.andrews@defra.gov.uk>",
+    "Steve Hunt <steven.hunt@defra.gov.uk>"
   ],
   "license": "OGL-UK-3.0",
   "dependencies": {
-    "@hapi/hapi": "^20.0.0"
+    "@hapi/hapi": "^20.0.0",
+    "ffc-messaging": "^1.0.6"
   },
   "devDependencies": {
     "jest": "^26.4.0",
