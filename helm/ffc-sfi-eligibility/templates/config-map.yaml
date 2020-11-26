@@ -2,8 +2,8 @@
 {{- define "ffc-sfi-eligibility.config-map" -}}
 data:
   ELIGIBILITY_CHANGED_TOPIC_ADDRESS: {{ quote .Values.container.eligibilityChangedTopicAddress }}
-  ELIGIBILITY_CHECKER_SUBSCRIPTION_ADDRESS: {{ quote .Values.container.eligibilityCheckerSubscriptionAddress }}
-  MESSAGE_QUEUE_HOST: {{ quote .Values.container.messageQueueHost }}
+  ELIGIBILITY_CHANGED_SUBSCRIPTION_ADDRESS: {{ quote .Values.container.eligibilityChangedSubscriptionAddress }}
+  SERVICE_BUS_HOST: {{ quote .Values.container.messageQueueHost }}
   NODE_ENV: {{ quote .Values.environment }}
   PORT: {{ quote .Values.container.port }}
   UPDATE_ELIGIBILITY_QUEUE_ADDRESS: {{ quote .Values.container.updateEligibilityQueueAddress }}

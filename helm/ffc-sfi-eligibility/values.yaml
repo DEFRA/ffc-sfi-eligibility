@@ -34,7 +34,7 @@ container:
   messageQueueHost: dummy
   updateEligibilityQueueAddress: update-eligibility
   eligibilityChangedTopicAddress: eligibility-changed
-  eligibilityCheckerSubscriptionAddress: eligibility-checker
+  eligibilityChangedSubscriptionAddress: eligibility-changed
 
 livenessProbe:
   path: /healthz
