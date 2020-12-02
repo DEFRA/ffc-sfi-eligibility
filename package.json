@@ -1,6 +1,6 @@
 {
   "name": "ffc-sfi-eligibility",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Backend microservice for validating eligibility an SFI agreement",
   "homepage": "https://github.com/DEFRA/ffc-sfi-eligibility",
   "main": "app/index.js",
