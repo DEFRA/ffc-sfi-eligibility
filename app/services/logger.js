@@ -1,4 +1,4 @@
-const logger = require('bunyan').createLogger({ name: 'ffc-eligibility' })
+const logger = require('bunyan').createLogger({ name: 'ffc-sfi-eligibility' })
 
 // Log error with optional msg to provide additional context
 function logError (err, msg) {
