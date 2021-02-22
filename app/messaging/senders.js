@@ -1,9 +1,10 @@
 const messagingConfig = require('../config/messaging')
 const { MessageSender } = require('ffc-messaging')
+const { log } = require('../services/logger')
 
-let eligibilitySender
+const eligibilitySender = new MessageSender(messagingConfig.updateEligibilityQueue)
 
-const createMessage = eligibilityData => ({
+const createMessage = (eligibilityData) => ({
   body: eligibilityData,
   type: messagingConfig.updateEligibilityMessageType,
   source: messagingConfig.messageSource
@@ -25,10 +26,8 @@ process.on('SIGINT', async () => {
 
 module.exports = {
   updateEligibility: async function (eligibilityData) {
-    eligibilitySender = new MessageSender(messagingConfig.updateEligibilityQueue)
-    await eligibilitySender.connect()
-    const message = createMessage(eligibilityData)
-    await eligibilitySender.sendMessage(message)
-    await eligibilitySender.closeConnection()
+    const msg = createMessage(eligibilityData)
+    log('sending message', msg)
+    await eligibilitySender.sendMessage(msg)
   }
 }
