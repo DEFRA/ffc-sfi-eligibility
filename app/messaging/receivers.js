@@ -18,8 +18,8 @@ process.on('SIGINT', async () => {
 })
 
 module.exports = {
-  startEligibilityChanged: async function (dummyAction) {
-    const updateAction = msg => dummyAction(msg, eligibilityReceiver)
+  startEligibilityChanged: async function (messageAction) {
+    const updateAction = msg => messageAction(msg, eligibilityReceiver)
     eligibilityReceiver = new MessageReceiver(messagingConfig.eligibilityChangedSubscription, updateAction)
     await eligibilityReceiver.subscribe()
   }
